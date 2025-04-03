@@ -51,6 +51,10 @@ public class Etal {
 	}
 
 	public void libererEtal() {
+		vendeur = null;
+		produit = null;
+		quantiteDebutMarche = 0;
+		quantite = 0;
 		etalOccupe = false;
 	}
 
