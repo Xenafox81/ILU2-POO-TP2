@@ -16,9 +16,9 @@ import villagegaulois.Village;
 public class TestControleursDesCas {
 	public static void main(String[] args) {
 
-		//TODO decommenter les cas au fur et a mesure que vous avancez dans le TP
+
 		
-		Village village = new Village("le village des irréductibles", 10, 5);
+		Village village = new Village("le village des irreductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Asterix", 6);
@@ -73,7 +73,7 @@ public class TestControleursDesCas {
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
 				controlVerifierIdentite, village);
 		int numeroEtal = controlPrendreEtal.prendreEtal("Obelix", "fleur", 5);
-		System.out.println("Obelix a pris l'étal n°" + numeroEtal);
+		System.out.println("Obelix a pris l'etal n�" + numeroEtal);
 
 //		Sortie Console :
 //		Cas 4 : Prendre etal
@@ -90,17 +90,17 @@ public class TestControleursDesCas {
 				.trouverEtalVendeur("Obelix");
 		Etal etalIntrus = controlTrouverEtalVendeur
 				.trouverEtalVendeur("Intrus");
-		System.out.print("L'étal d'Obélix");
+		System.out.print("L'etal d'Obelix");
 		if (etalObelix != null) {
-			System.out.println(" est trouvé");
+			System.out.println(" est trouve");
 		} else {
-			System.out.println(" n'est pas trouvé");
+			System.out.println(" n'est pas trouve");
 		}
-		System.out.print("L'étal de Intrus");
+		System.out.print("L'etal de Intrus");
 		if (etalIntrus != null) {
-			System.out.println(" est trouvé");
+			System.out.println(" est trouve");
 		} else {
-			System.out.println(" n'est pas trouvé");
+			System.out.println(" n'est pas trouve");
 		}
 		
 
@@ -121,9 +121,8 @@ public class TestControleursDesCas {
 		System.out.println("[0] : un boolean indiquant si l'étal est occupé ");
 		System.out.println("[1] : nom du vendeur");
 		System.out.println("[2] : produit vendu");
-		System.out.println(
-				"[3] : quantité de produit à vendre au début du marché");
-		System.out.println("[4] : quantité de produit vendu");
+		System.out.println("[3] : quantite de produit a�vendre au debut du marche");
+		System.out.println("[4] : quantite de produit vendu");
 		for (String string : ventesObelix) {
 			System.out.println(string);
 		}

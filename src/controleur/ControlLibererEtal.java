@@ -10,7 +10,6 @@ public class ControlLibererEtal {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
 
 	/**
 	 * 
@@ -23,7 +22,7 @@ public class ControlLibererEtal {
 	 * 		[4] : quantité de produit vendu
 	 */
 	public String[] libererEtal(String nomVendeur) {
-		String[] donneesEtal = new String [5];
+		String[] donneesEtal;
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		if (etal == null) {
 	        return null; 

@@ -11,8 +11,7 @@ public class BoundaryEmmenager {
 
 	public void emmenager(String nomVisiteur) {
 		if (controlEmmenager.isHabitant(nomVisiteur)) {
-			System.out.println(
-					"Mais vous êtes déjà un habitant du village !");
+			System.out.println("Mais vous etes deja�un habitant du village !");
 		} else {
 			StringBuilder question = new StringBuilder();
 			question.append("Êtes-vous :\n");

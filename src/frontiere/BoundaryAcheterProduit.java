@@ -1,7 +1,6 @@
 package frontiere;
 
 import controleur.ControlAcheterProduit;
-import personnages.Gaulois;
 
 public class BoundaryAcheterProduit {
 	private ControlAcheterProduit controlAcheterProduit;
@@ -29,6 +28,9 @@ public class BoundaryAcheterProduit {
 				int idVendeur = -1;
 				do {
 					idVendeur = Clavier.entrerEntier(phrase.toString())-1;
+					if(idVendeur <0 || idVendeur >= listeVendeur.length) {
+						System.out.println("Veuillez entrer un numéro valide.");
+					}
 				} while (idVendeur < 0 && idVendeur >= listeVendeur.length);
 				phrase.append(nomAcheteur + " se deplace jusqu'a l'etal du vendeur " + listeVendeur[idVendeur].getNom() + "\n");
 				phrase.append("Bonjour " + nomAcheteur + "\n");
