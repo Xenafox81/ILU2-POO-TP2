@@ -20,10 +20,19 @@ public class ControlAcheterProduit {
 	public boolean verifierIdentite(String nomClient) {
 		return controlVerifierIdentite.verifierIdentite(nomClient);
 	}
-	
-	public Gaulois[] getVendeurs(String produit) {
-		return village.rechercherVendeursProduit(produit);
-	}
+	public String[] getVendeurs(String produit) {
+        Gaulois[] vendeurs = village.rechercherVendeursProduit(produit);  // Recherche des vendeurs
+        if (vendeurs == null || vendeurs.length == 0) {
+            return new String[0]; // Aucun vendeur trouvé pour ce produit
+        }
+
+        // Créer un tableau de noms à partir des objets Gaulois
+        String[] nomsVendeurs = new String[vendeurs.length];
+        for (int i = 0; i < vendeurs.length; i++) {
+            nomsVendeurs[i] = vendeurs[i].getNom();  // Récupérer seulement le nom
+        }
+        return nomsVendeurs; // Retourner les noms
+    }
 	
 	public Etal getEtalVendeur(String vendeur) {
 		return controlTrouverEtalVendeur.trouverEtalVendeur(vendeur);
